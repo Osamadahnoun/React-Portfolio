@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: black;
+  background: white;
 }
+
+.app-div {
+  min-height: 100vh;
+}
+
+header {
+  padding: 25px 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+header h1 {
+  margin: 20px;
+  font-size: 2vw;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 20px;
+  font-size: 1.5vw;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px;
+  padding: 10px;
+  border-left: solid black;
+}
+
+.about h2 {
+  font-size: 1.5vw;
+  margin: 10px;
+}
+
+.about img {
+  width: 15%;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.about p {
+  margin: 10px;
+}
+
+.sticky-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: silver;
+  position: sticky;
+  top: 100%;
+  padding: 20px 35px;
+
+}
+
+.sticky-footer img {
+  width: 7%;
+  margin: 10px;
+}
+
