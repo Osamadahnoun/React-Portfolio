@@ -81,3 +81,59 @@ header nav ul li {
   margin: 10px;
 }
 
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.gallery-container h2 {
+  margin: 40px 40px 0 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 30px
+}
+
+.gallery img {
+  width: 40%;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.form-container {
+  margin: 30px;
+  padding: 10px;
+  border-radius: 12px;
+  width: 50%;
+  background-color: silver;
+}
+
+.form h1 {
+  font-size: 2vw;
+  margin: 20px;
+}
+
+.contact label {
+  font-size: 1.5vw;
+  margin: 20px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  margin: 20px;
+  width: 90%;
+  border-radius: 12px;
+  border: none;
+}
+
+.contact button {
+  width: 90%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 12px;
+  border: none;
+}
