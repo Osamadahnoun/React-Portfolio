@@ -50,6 +50,10 @@ header nav ul li {
   font-size: 1.5vw;
 }
 
+header nav ul li:hover {
+  color: var(--quaternary-color);
+}
+
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -113,14 +117,23 @@ header nav ul li {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 30px
+  margin: 30px;
+  position: relative;
+
 }
 
 .gallery img {
   width: 40%;
   margin: 10px;
   border-radius: 5px;
+  /* display: block; */
 }
+
+.gallery img:hover {  
+  cursor: pointer;
+  color: #9f496e; 
+  opacity: 50%;
+ }
 
 .form-container {
   /* margin: 30px;
