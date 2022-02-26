@@ -16,19 +16,12 @@ function App() {
   return (
     <div className="app-div">
       <Header
-        aboutSelected={aboutSelected}
         setAboutSelected={setAboutSelected}
-        portfolioSelected={portfolioSelected}
         setPortfolioSelected={setPortfolioSelected}
-        contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-        resumeSelected={resumeSelected}
         setResumeSelected={setResumeSelected}
       />
       <main>
-        {/* <About />
-        <Gallery />
-        <Contact /> */}
         {aboutSelected && !portfolioSelected && !contactSelected && !resumeSelected ? (
           <About />
         ) : portfolioSelected && !aboutSelected && !contactSelected && !resumeSelected ? (

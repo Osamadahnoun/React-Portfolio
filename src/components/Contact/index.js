@@ -2,7 +2,8 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <div className="form-container">
+        <div className="center">
+            <div className="form-container">
 
             <section className="form">
                 <h1>Contact me</h1>
@@ -26,6 +27,7 @@ const Contact = () => {
                 </form>
             </section>
 
+            </div>
         </div>
     )
 }

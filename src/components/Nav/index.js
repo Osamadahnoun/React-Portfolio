@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Nav = (props) => {
 
@@ -9,14 +9,12 @@ const Nav = (props) => {
         {name: "Resume"}
     ]
 
+    const [currentSection, setCurrentSection] = useState(sections[0])
+
     const {
-        aboutSelected,
         setAboutSelected,
-        portfolioSelected,
         setPortfolioSelected,
-        contactSelected,
         setContactSelected,
-        resumeSelected,
         setResumeSelected
       } = props;
 
@@ -51,7 +49,10 @@ const Nav = (props) => {
             <nav>
                 <ul>
                     {sections.map((section) => (
-                        <li key={section.name} onClick={() => sectionSelected(section.name)}>
+                        <li key={section.name} onClick={() => {
+                            sectionSelected(section.name)
+                            setCurrentSection(section)
+                        }} className={currentSection.name === section.name && 'navActive'}>
                             {section.name}
                         </li>
                     ))}

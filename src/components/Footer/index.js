@@ -6,8 +6,8 @@ import phoneLogo from '../../assets/images/phone.png'
 const Footer = () => {
     return (
         <footer className="sticky-footer">
-            <img src={githubLogo} alt="" />
-            <img src={linkedinLogo} alt="" />
+            <img src={githubLogo} alt="" onClick={() => window.open('https://github.com/Osamadahnoun')}/>
+            <img src={linkedinLogo} alt="" onClick={() => window.open('https://www.linkedin.com/in/osama-dahnoun-99374a231')}/>
             <img src={phoneLogo} alt="" />
         </footer>
     )
