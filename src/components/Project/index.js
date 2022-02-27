@@ -32,7 +32,7 @@ const Project = () => {
     return (
         <section className="gallery">
              {photos.map((photo, i) => (
-                        <img src={require(`../../assets/images/${i}.png`)} alt={photo.alt} onClick={() => window.open(`${photo.href}`)} className="image__img"/>
+                    <img src={require(`../../assets/images/${i}.png`)} alt={photo.alt} onClick={() => window.open(`${photo.href}`)}/>
         ))}
         </section>
     )

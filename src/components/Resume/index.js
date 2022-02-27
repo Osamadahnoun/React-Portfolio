@@ -1,4 +1,5 @@
 import React from "react";
+import resume from '../../assets/images/resume.png'
 
 const Resume = () => {
 
@@ -8,17 +9,17 @@ const Resume = () => {
     return (
         <section className="resume-container">
             <h2>Resume</h2>
-            <p>Download my resume</p>
+            <p><a href={resume} className="resumeDownload" download>Download my resume</a></p>
             <ul>
                <h3>Front-End Proficiencies</h3>
                {arr1.map((name) => (
-                   <li>{name}</li>
+                   <li key={name}>{name}</li>
                ))}
             </ul>
             <ul>
                 <h3>Back-End Proficiencies</h3>
                 {arr2.map((name) => (
-                   <li>{name}</li>
+                   <li key={name}>{name}</li>
                ))}
             </ul>
         </section>
