@@ -17,6 +17,7 @@
 body {
   color: var(--tertiary-color);
   background: var(--primary-color);
+  font-family: sans-serif
 }
 
 .app-div {
@@ -52,10 +53,7 @@ header nav ul li {
 
 header nav ul li:hover {
   color: var(--quaternary-color);
-<<<<<<< HEAD
-=======
   cursor: pointer;
->>>>>>> main
 }
 
 .about {
@@ -129,29 +127,67 @@ header nav ul li:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 30px;
-  position: relative;
-
 }
 
-.gallery img {
+.span {
   width: 40%;
   margin: 10px;
   border-radius: 5px;
-  /* display: block; */
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+ }
+  
+ .gallery img {
+  width: 100%;
+  display: block;
+ } 
+
+.image__overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 38, 45, 0.8);
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
-<<<<<<< HEAD
-.gallery img:hover {  
-  cursor: pointer;
-  color: #9f496e; 
-  opacity: 50%;
- }
-=======
-.gallery img:hover {
-  opacity: 50%;
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__title:hover {
+  color: var(--quaternary-color);
   cursor: pointer;
 }
->>>>>>> main
+
+.githubLink {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.githubLink:hover  {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
 
 .form-container {
   /* margin: 30px;
@@ -188,7 +224,6 @@ header nav ul li:hover {
   padding: 10px;
   margin: 10px;
   font-size: 1.2vw;
-  /* border-radius: 5px; */
   background: var(--quaternary-color);
   color: var(--tertiary-color);
 }
@@ -393,7 +428,7 @@ header nav ul li:hover {
 .gallery-container h2 {
   font-size: 2.5vw;
 }
-.gallery img {
+.span {
   width: 100%;
 }
 .resume-container h2 {
@@ -448,7 +483,7 @@ header nav ul li:hover {
 .gallery-container h2 {
   font-size: 4vw;
 }
-.gallery img {
+.span {
   width: 100%;
 }
 .resume-container h2 {
@@ -511,7 +546,7 @@ header nav ul li:hover {
   justify-content: center;
   margin-top: 5px;
 }
-.gallery img {
+.span {
   width: 100%;
 }
 .gallery-container {
@@ -603,7 +638,7 @@ header nav ul li:hover {
   justify-content: center;
   margin-top: 5px;
 }
-.gallery img {
+.span {
   width: 100%;
 }
 .gallery-container {
