@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import Modal from './components/Modal';
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
   const [portfolioSelected, setPortfolioSelected] = useState(false);
   const [contactSelected, setContactSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="app-div">
@@ -32,7 +35,8 @@ function App() {
           <Resume />
         )}
       </main>
-      <Footer />
+      {openModal && <Modal setOpenModal={setOpenModal}/>}
+      <Footer setOpenModal={setOpenModal}/>
     </div>
   );
 }

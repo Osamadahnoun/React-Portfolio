@@ -52,6 +52,10 @@ header nav ul li {
 
 header nav ul li:hover {
   color: var(--quaternary-color);
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> main
 }
 
 .about {
@@ -98,6 +102,13 @@ header nav ul li:hover {
   padding: 4px;
 }
 
+
+.sticky-footer img:hover {
+  background-color: var(--quaternary-color);
+  cursor: pointer;
+
+}
+
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -129,11 +140,18 @@ header nav ul li:hover {
   /* display: block; */
 }
 
+<<<<<<< HEAD
 .gallery img:hover {  
   cursor: pointer;
   color: #9f496e; 
   opacity: 50%;
  }
+=======
+.gallery img:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+>>>>>>> main
 
 .form-container {
   /* margin: 30px;
@@ -175,6 +193,12 @@ header nav ul li:hover {
   color: var(--tertiary-color);
 }
 
+.contact button:hover {
+  background: var(--tertiary-color);
+  color: var(--quaternary-color);
+  cursor: pointer;
+}
+
 .resume-container {
   display: flex;
   flex-wrap: wrap;
@@ -204,6 +228,45 @@ header nav ul li:hover {
   color: var(--quaternary-color);
 }
 
+.modalBackground {
+  display: flex;
+  justify-content: center;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalText {
+  font-size: 1.25vw;
+  margin: 10px;
+  color: var(--tertiary-color);
+}
+
+.closeModal {
+  background-color: var(--quaternary-color);
+  color: var(--tertiary-color);
+  font-size: 1.25vw;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.closeModal:hover {
+  color: var(--quaternary-color);
+  background-color: var(--tertiary-color);
+}
+
+.resumeDownload {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.resumeDownload:hover {
+  color: var(--quaternary-color);
+}
 @media screen and (max-width: 1400px) {
   header h1 {
     font-size: 2.5vw;
@@ -216,6 +279,12 @@ header nav ul li:hover {
   font-size: 2vw;
 }
 .about p {
+  font-size: 1.75vw;
+}
+.modalText {
+  font-size: 1.75vw;
+}
+.closeModal {
   font-size: 1.75vw;
 }
 .about img {
@@ -258,6 +327,12 @@ header nav ul li:hover {
   font-size: 2vw;
 }
 .about p {
+  font-size: 1.75vw;
+}
+.modalText {
+  font-size: 1.75vw;
+}
+.closeModal {
   font-size: 1.75vw;
 }
 .about img {
@@ -304,6 +379,12 @@ header nav ul li:hover {
   font-size: 2.5vw;
 }
 .about p {
+  font-size: 2.25vw;
+}
+.modalText {
+  font-size: 2.25vw;
+}
+.closeModal {
   font-size: 2.25vw;
 }
 .about img {
@@ -355,6 +436,12 @@ header nav ul li:hover {
 .about p {
   font-size: 3.75vw;
 }
+.modalText {
+  font-size: 3.75vw;
+}
+.closeModal {
+  font-size: 3.75vw;
+}
 .about img {
   width: 50%;
 }
@@ -402,6 +489,12 @@ header nav ul li:hover {
   font-size: 5vw;
 }
 .about p {
+  font-size: 4.75vw;
+}
+.modalText {
+  font-size: 4.75vw;
+}
+.closeModal {
   font-size: 4.75vw;
 }
 .about img {
@@ -490,6 +583,12 @@ header nav ul li:hover {
 }
 .about p {
   font-size: 6.25vw;
+}
+.modalText {
+  font-size: 6.75vw;
+}
+.closeModal {
+  font-size: 6.75vw;
 }
 .about img {
   width: 100%;
