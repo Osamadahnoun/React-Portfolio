@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../Nav";
+import { FaRegSmileBeam } from 'react-icons/fa'
 
 const Header = (props) => {
     const {
@@ -11,7 +12,7 @@ const Header = (props) => {
     
     return (
         <header>
-            <h1>Osama Dahnoun</h1>
+            <h1>Osama Dahnoun <FaRegSmileBeam className="logo" /></h1>
             <Nav 
                 setAboutSelected={setAboutSelected}
                 setPortfolioSelected={setPortfolioSelected}
