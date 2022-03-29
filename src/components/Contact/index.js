@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { validateEmail } from "../../utils/helpers";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -7,14 +8,41 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const form = useRef();
+
   const [errorMessage, setErrorMessage] = useState("");
 
   const { name, email, message } = formState;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formState);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  // };
+
+  const [result, showResult] = useState(false);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("gmail", "template_sq4u8bc", form.current, "Tj9Ng1WyJrJQ_ZZCK")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    setFormState({ name: "", email: "", message: "" });
+    showResult(true);
   };
+
+  // hide success message
+  setTimeout(() => {
+    showResult(false);
+  }, 20000);
 
   const handleChange = (event) => {
     if (event.target.name === "email") {
@@ -46,7 +74,7 @@ const Contact = () => {
             Feel free to contact me however you'd like. You can use this form or
             my contact info below (Click on the phone icon).
           </p>
-          <form className="contact" onSubmit={handleSubmit}>
+          <form className="contact" onSubmit={sendEmail} ref={form}>
             <div>
               <label htmlFor="name">Name:</label>
               <br />
@@ -83,6 +111,11 @@ const Contact = () => {
               </div>
             )}
             <button type="submit">Submit</button>
+            <p>
+              {result
+                ? `Message successfully sent! I will get back to you as soon as possible!`
+                : null}
+            </p>
           </form>
         </section>
       </div>
